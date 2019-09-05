@@ -13,7 +13,7 @@ public class Stove {
 	public final static int NUM_BURNERS = 4;
 	private ArrayList<Burner> burners; 
 	private boolean redLight = false;
-	
+
 	/** 
 	 * Constructor for the stove
 	 * Set up the burners
@@ -24,7 +24,7 @@ public class Stove {
 		for (int i=0; i<NUM_BURNERS; i++)
 			burners.add(new Burner());
 	}
-	
+
 	/**
 	 * Display the current stove status
 	 *  
@@ -34,16 +34,14 @@ public class Stove {
 		redLight = false;
 		for(int i=0; i<burners.size(); i++)
 		{
-			Burner b = burners.get(i);
-			if(b.getMyTemperature()==Burner.Temperature.BLAZING) {redLight = true;}
-			System.out.println("[" + b.mySetting.toString() + "]....." + b.getMyTemperature().toString());
-			
+			burners.get(i).display();
+			if(burners.get(i).getMyTemperature()==Burner.Temperature.BLAZING) {redLight = true;}
 		}
 		if(redLight) {
 			System.out.println("RED LIGHT - HOT BURNER ALERT");
 		}
 	}
-	
+
 	/**
 	 * Test various burner actions by turning them up
 	 */
@@ -59,7 +57,7 @@ public class Stove {
 		burners.get(2).plusButton();
 		// Burner 3 should remain OFF
 	}
-	
+
 	/**
 	 * Test adjusting the burners
 	 */
@@ -71,7 +69,7 @@ public class Stove {
 		// Decrease burner 2 to OFF
 		burners.get(2).minusButton();	
 	}
-	
+
 	/**
 	 * Test some more burner adjustments
 	 */
@@ -82,7 +80,7 @@ public class Stove {
 		// Increase burner 3 to LOW
 		burners.get(3).plusButton();
 	}	
-	
+
 	/**
 	 * Simulate passage of time
 	 * 
@@ -94,32 +92,32 @@ public class Stove {
 			for (Burner burner : burners)
 				burner.updateTemperature();
 	}
-	
+
 	/**
 	 * Main driver for simulation
 	 * @param args Unused
 	 */
 	public static void main(String[] args) {
 		Stove stove = new Stove();
-		
+
 		System.out.println("Beginning stove state ");
 		// trun the burners up
 		stove.displayStove();
 		stove.turnBurnersUp();
 		stove.timePassing(6);
 		System.out.println("\nStove after burners turned up ");
-		
+
 		// adjust the burners
 		stove.displayStove();
 		stove.adjustBurners();
 		stove.timePassing(2);
 		System.out.println("\nStove after burners adjusted ");
-		
+
 		// some more adjustment test
 		stove.displayStove();
 		stove.moreBurnerAdjustments();
 		stove.timePassing(1);
-		
+
 		// Ensure temperatures don't update till time has passed
 		System.out.println("\nStove waiting for time to elapse ");
 		stove.displayStove();

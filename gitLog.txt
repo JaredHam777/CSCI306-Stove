@@ -1,0 +1,48 @@
+commit 6ac037bbc1d67e77a772fbe048d29e13a592c4fb
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 10:15:24 2019 -0600
+
+    fixes
+
+commit c7b3ecf52c330ee834721b61b806f10eced9459d
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 10:08:05 2019 -0600
+
+    credits
+
+commit 681fdbf719d5c143895b4bedcedaf22691495d42
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 10:06:00 2019 -0600
+
+    final commit
+
+commit bdeeb5b4207408d9324ec7007dcd966a0aafa5a8
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 09:23:10 2019 -0600
+
+    working classes
+
+commit f15736d9734d0fa953f4d3b35c68d0f29fc114a3
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 08:09:49 2019 -0600
+
+    git ignore
+
+commit 2c6ae0bf445ce94f788369e3ff227d06940469b1
+Merge: 7f9fdb1 d4bea5f
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 07:57:01 2019 -0600
+
+    Merge branch 'master' of https://github.com/JaredHam777/CSCI306-Stove
+
+commit 7f9fdb1aa07ea22a66ed190a80f336133ce9d30f
+Author: JaredHam777 <jgh1998@comcast.net>
+Date:   Thu Sep 5 07:46:24 2019 -0600
+
+    initial commit
+
+commit d4bea5f6a8c1446a61a4b20e6b82d65f3700a4cf
+Author: JaredHam777 <35314016+JaredHam777@users.noreply.github.com>
+Date:   Thu Sep 5 07:43:59 2019 -0600
+
+    Initial commit

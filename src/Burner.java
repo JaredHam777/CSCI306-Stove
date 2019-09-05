@@ -19,8 +19,8 @@ public class Burner {
 		public String toString()	{
 			return value;
 		}
-		
-	
+
+
 	}
 	private Temperature myTemperature;
 	public Temperature getMyTemperature() {
@@ -28,7 +28,7 @@ public class Burner {
 	}
 	public void changeTemperature(int amount) {
 		try {
-		myTemperature = myTemperature.values()[myTemperature.ordinal()+amount];
+			myTemperature = myTemperature.values()[myTemperature.ordinal()+amount];
 		} catch (Exception e) {}
 	}
 
@@ -36,23 +36,23 @@ public class Burner {
 	public Setting mySetting;
 	public static final int TIME_DURATION=2;
 	private int timer=TIME_DURATION;
-	
-	
+
+
 	public void plusButton()	{
 		try {
-		mySetting = mySetting.values()[mySetting.ordinal()+1];
+			mySetting = mySetting.values()[mySetting.ordinal()+1];
 		} catch (Exception e) {}
-		
+
 	}
-	
+
 	public void minusButton()	{
 		try {
-		mySetting = mySetting.values()[mySetting.ordinal()-1];
+			mySetting = mySetting.values()[mySetting.ordinal()-1];
 		} catch (Exception e) {}
 	}
-	
+
 	public void updateTemperature()	{
-		
+
 		//if there is a difference between current temp and setting temp:
 		if(this.mySetting.ordinal()!=this.myTemperature.ordinal())
 		{
@@ -61,25 +61,25 @@ public class Burner {
 			if(this.mySetting.ordinal() < this.myTemperature.ordinal())	{
 				direction = -1;
 			}			
-			
-			
+
+
 			if(timer==0)	{
 				this.changeTemperature(direction);
 				timer=TIME_DURATION;
 			}
-			
+
 		}
 		else	{
-			
+
 		}
 	}
-	
-	
+
+
 	public Burner()	{
-		super();
+		
 		this.mySetting = Setting.valueOf("OFF");
 		this.myTemperature = Temperature.COLD;
 
 	}
-	
+
 }
