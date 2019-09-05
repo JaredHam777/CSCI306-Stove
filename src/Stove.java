@@ -12,6 +12,7 @@ public class Stove {
 	// Our stove will have 4 burners
 	public final static int NUM_BURNERS = 4;
 	private ArrayList<Burner> burners; 
+	private boolean redLight = false;
 	
 	/** 
 	 * Constructor for the stove
@@ -30,10 +31,16 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-		
+		redLight = false;
 		for(int i=0; i<burners.size(); i++)
 		{
-			System.out.println("[" + burners.get(i).mySetting.toString() + "]....." + burners.get(i).myTemperature.toString());
+			Burner b = burners.get(i);
+			if(b.myTemperature==Burner.Temperature.BLAZING || b.myTemperature==Burner.Temperature.HOT) {redLight = true;}
+			System.out.println("[" + b.mySetting.toString() + "]....." + b.myTemperature.toString());
+			
+		}
+		if(redLight) {
+			System.out.println("RED LIGHT - HOT BURNER ALERT");
 		}
 	}
 	
