@@ -1,4 +1,11 @@
-
+/**
+ * Setting class. 
+ *  
+ * @author Jared Hamilton
+ *
+ * 
+ * C06A Stove Exercise
+ */
 
 
 public enum	Setting {
