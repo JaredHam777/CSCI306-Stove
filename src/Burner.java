@@ -1,3 +1,12 @@
+/**
+ * Burner class. 
+ *  
+ * @author Jared Hamilton
+ *
+ * 
+ * C06A Stove Exercise
+ */
+
 
 public class Burner {
 
@@ -13,8 +22,8 @@ public class Burner {
 		
 	
 	}
-	Temperature myTemperature;
-	private Temperature getMyTemperature() {
+	private Temperature myTemperature;
+	public Temperature getMyTemperature() {
 		return myTemperature;
 	}
 	public void changeTemperature(int amount) {

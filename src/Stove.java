@@ -35,8 +35,8 @@ public class Stove {
 		for(int i=0; i<burners.size(); i++)
 		{
 			Burner b = burners.get(i);
-			if(b.myTemperature==Burner.Temperature.BLAZING || b.myTemperature==Burner.Temperature.HOT) {redLight = true;}
-			System.out.println("[" + b.mySetting.toString() + "]....." + b.myTemperature.toString());
+			if(b.getMyTemperature()==Burner.Temperature.BLAZING) {redLight = true;}
+			System.out.println("[" + b.mySetting.toString() + "]....." + b.getMyTemperature().toString());
 			
 		}
 		if(redLight) {
