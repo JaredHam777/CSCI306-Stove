@@ -12,7 +12,9 @@ public class Stove {
 	// Our stove will have 4 burners
 	public final static int NUM_BURNERS = 4;
 	private ArrayList<Burner> burners; 
-	private boolean redLight = false;
+
+
+
 
 	/** 
 	 * Constructor for the stove
@@ -31,10 +33,16 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-		redLight = false;
+
+		//set redLight to off position (false)
+		boolean redLight = false;
+
+		//iterate through burners and call each of their display function
 		for(int i=0; i<burners.size(); i++)
 		{
 			burners.get(i).display();
+
+			//test if any burner is at BLAZING temperature, then set redLight to true
 			if(burners.get(i).getMyTemperature()==Burner.Temperature.BLAZING) {redLight = true;}
 		}
 		if(redLight) {
