@@ -2,7 +2,7 @@
  * Burner class. 
  *  
  * @author Jared Hamilton
- *
+ * @author Mitch Cutts
  * 
  * C06A Stove Exercise
  */
@@ -74,9 +74,14 @@ public class Burner {
 		}
 	}
 
+	public void display()
+	{
+		System.out.println("["+this.mySetting.toString()+"]....."+this.getMyTemperature().toString());
+	}
+
 
 	public Burner()	{
-		
+
 		this.mySetting = Setting.valueOf("OFF");
 		this.myTemperature = Temperature.COLD;
 
