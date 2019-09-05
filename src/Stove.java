@@ -30,7 +30,11 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-
+		
+		for(int i=0; i<burners.size(); i++)
+		{
+			System.out.println("[" + burners.get(i).mySetting.toString() + "]....." + burners.get(i).myTemperature.toString());
+		}
 	}
 	
 	/**
